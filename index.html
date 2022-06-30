@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" novalidate>
+        <div>
+            <label for="mail">Enter Email: </label>
+            <input type="email" name="mail" id="mail" required>
+            <span class="error" aria-live="polite"></span>
+        </div>
+        <div>
+            <label for="country">Enter Country: </label>
+            <input type="text" name="country" id="country" minlength="2" required>
+            <span class="error" aria-live="polite"></span>        
+        </div>
+        <div>
+            <label for="zipCode">Enter Zip-Code: </label>
+            <input type="text" name="zipCode" id="zipCode" pattern="[0-9]{4}-[0-9]{3}" required>
+            <span class="error" aria-live="polite"></span>
+        </div>
+        <div>
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" minlength="7" maxlength="30" required>
+            <span class="error" aria-live="polite"></span>        
+        </div>
+        <div>
+            <label for="passwordConfirm">Confirm Password: </label>
+            <input type="password" name="passwordConfirm" id="passwordConfirm" required>
+            <span class="error" aria-live="polite"></span>        
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
